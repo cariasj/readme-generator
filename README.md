@@ -1,16 +1,27 @@
-# d
 
-          # d
+  
+          #  Project 2 test 
 
-          # d
+          # Description 
+          this is a desc of project 2
 
-          # d
+          # Table Of Contents 
+          tabke of content blha blah 
 
-          # MIT
+          # Installation 
+          this is the install details
 
-          # d
+          # license 
+          MIT
 
-          # 
-          
-          # 
+          # Contributions 
+          josue carias
+
+          # Test Instructions 
+          test whatever this is
+
+          # Github Profile 
+          cariasj@github
+          cariasjoseuz@gmail.com
+
           

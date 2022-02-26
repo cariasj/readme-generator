@@ -8,14 +8,28 @@ const questions = [
         {
             type: 'input',
             name: 'title',
-            message: 'Project Title'
-    
+            message: 'Project Title',
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Please enter a project title');
+                  return false; 
+                }
+              }
         },
         {
             type: 'input',
             name: 'desc',
-            message: 'Description of project'
-    
+            message: 'Description of project',
+            validate: descInput => {
+                if (descInput) {
+                  return true;
+                } else {
+                  console.log('Please enter a description for the project');
+                  return false; 
+                }
+              }
         },
         {
             type: 'input',
@@ -25,18 +39,34 @@ const questions = [
         {
             type: 'input',
             name: 'installation',
-            message: 'Installation'
+            message: 'Installation',
+            validate: installInput => {
+                if (installInput) {
+                  return true;
+                } else {
+                  console.log('Please enter installation details for the project');
+                  return false; 
+                }
+              }
         },
         {    
             type: 'list',
             name: 'license',
-            message: 'License',
+            message: 'What license is the project associated with?',
             choices: ['MIT', 'Apache', 'GNU', 'None'] 
         },
         {
             type: 'input',
             name: 'contributing',
-            message: 'Contributing'
+            message: 'Who are the contributing members for the project?',
+            validate: contrInput => {
+                if (contrInput) {
+                  return true;
+                } else {
+                  console.log('Please provide at least ONE member');
+                  return false; 
+                }
+              }
         },
         {
             type: 'input',
@@ -46,7 +76,28 @@ const questions = [
         {
             type: 'input',
             name: 'questions',
-            message: 'Questions'
+            message: 'What is your Github Username?',
+            validate: questionsInput => {
+                if (questionsInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your Github username');
+                  return false; 
+                }
+              }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email?',
+            validate: emailInput => {
+                if (emailInput) {
+                  return true;
+                } else {
+                  console.log('Please enter your email address');
+                  return false; 
+                }
+              }
         }
     ];
 
