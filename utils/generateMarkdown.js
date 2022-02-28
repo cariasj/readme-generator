@@ -6,7 +6,20 @@
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 
-//function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license == "None") {
+      return ' ';
+  }
+  else if (license == 'MIT') {
+      return `https://choosealicense.com/licenses/mit/`;
+  }
+  else; if (license == 'Apache 2.0') {
+    return `https://www.apache.org/licenses/LICENSE-2.0`;
+  } 
+  else if (license == 'GNU GPLv3') {
+  return `https://choosealicense.com/licenses/gpl-3.0/`;
+  } 
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -17,29 +30,29 @@
 function generateMarkdown(data) {
   return `
   
-          #  ${data.title} 
+  # ${data.title} 
 
-          # Description 
-          ${data.desc}
+  ## Description 
+  ${data.desc}
 
-          # Table Of Contents 
-          ${data.tableofcontent}
+  ## Table Of Contents 
+  ${data.tableofcontent}
 
-          # Installation 
-          ${data.installation}
+  ## Installation 
+  ${data.installation}
 
-          # license 
-          ${data.license}
+  ## license 
+  ${renderLicenseLink(data.license)}
 
-          # Contributions 
-          ${data.contributing}
+  ## Contributions 
+  ${data.contributing}
 
-          # Test Instructions 
-          ${data.test}
+  ## Test Instructions 
+  ${data.test}
 
-          # Github Profile 
-          ${data.questions}
-          ${data.email}
+  ## Github Profile 
+  ${data.questions}
+  ${data.email}
 
           
 `;
